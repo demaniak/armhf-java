@@ -3,5 +3,5 @@ MAINTAINER HS Coetze <hs.coetzee+docker-java-armhf@gmail.com>
 LABEL java="7" arch="armhf" supplies="jre"
 RUN apt-get update
 RUN apt-get install software-properties-common python-software-properties -y && add-apt-repository ppa:openjdk-r/ppa  && apt-get update
-RUN  apt-get install openjdk-7-jre -y && apt-get remove software-properties-common python-software-properties -y && apt-get clean -y && apt-get autoclean -y && apt-get autoremove -y
+RUN  apt-get install openjdk-7-jre-headless -y && apt-get remove software-properties-common python-software-properties -y && apt-get clean -y && apt-get autoclean -y && apt-get autoremove -y
 RUN update-alternatives --set java /usr/lib/jvm/java-7-openjdk-armhf/jre/bin/java
